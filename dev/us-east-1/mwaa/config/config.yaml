@@ -1,0 +1,24 @@
+environments:
+  dev:
+    accounts:
+      account1: "304598107598"
+    region: "us-east-1"
+    vpc:
+      id: "vpc-0351f42123ea36e0b"                      # Your actual VPC ID
+      private_subnet_ids:                              # Your actual private subnet IDs
+        - "subnet-00eeae717cff72f29"                   # us-east-1a (10.0.2.0/24)
+        - "subnet-03293f15431222e56"                   # us-east-1b (10.0.3.0/24)
+      availability_zones:
+        - "us-east-1a"
+        - "us-east-1b"
+
+    mwaa:
+      name: "elt-mwaa-dev"
+      dags_s3_bucket: "mwaa-dags-dev-304598107598"    # Unique bucket name with your account ID
+      # plugins_s3_path: "plugins" # comment if no plugins is used 
+      requirements_s3_path: "requirements/requirements.txt"
+      airflow_version: "2.10.3"
+      environment_class: "mw1.micro"
+      min_workers: 1
+      max_workers: 1
+      webserver_access_mode: "PRIVATE_ONLY"

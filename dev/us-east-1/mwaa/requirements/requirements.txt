@@ -1,0 +1,5 @@
+--constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.3/constraints-3.11.txt"
+apache-airflow-providers-amazon
+apache-airflow-providers-postgres
+psycopg2-binary
+PyYAML

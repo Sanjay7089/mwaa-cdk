@@ -1,0 +1,11 @@
+env: 
+  dev:
+    accounts:
+      account1: "304598107598"
+    region: "us-east-1"
+    vpc:
+      name: elt-dev-vpc
+      cidr: 10.0.0.0/16
+      max_azs: 2
+      public_subnet_cidr_mask: 24
+      private_subnet_cidr_mask: 24
